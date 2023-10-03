@@ -35,14 +35,14 @@ helper(["yardimcifonksiyonlar"]);
                                             <ion-icon name="home-outline"></ion-icon>
                                         </a>
                                     </li>
-                                    <li class="breadcrumb-item active" aria-current="page">Kullanıcı Ekle</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Kullanıcı Düzenle</li>
                                 </ol>
                             </nav>
                         </div>
                         <div class="ms-auto">
                             <div class="btn-group">
                                 <button type="submit" class="btn btn-success">Kullanıcı Ekle</button>
-                                <a href="<?= base_url() ?>/users/add-users" class="btn btn-outline-primary">Kullanıcı
+                                <a href="<?= base_url() ?>/users" class="btn btn-outline-primary">Kullanıcı
                                     Listele</a>
                             </div>
                         </div>
@@ -70,8 +70,12 @@ helper(["yardimcifonksiyonlar"]);
                                     <input type="text" class="form-control" id="inputEmail" value="" name="email">
                                 </div>
                                 <div class="col-3">
+                                    <label for="inputEmail" class="form-label  mt-2">Telefon Numarası</label>
+                                    <input type="text" class="form-control" id="inputEmail" value="" name="phone">
+                                </div>
+                                <div class="col-3">
                                     <label for="inputEmail" class="form-label  mt-2">Kullanıcı Yetkisi</label>
-                                    <input type="text" class="form-control" id="inputEmail" value="UYE">
+                                    <input type="text" class="form-control" id="inputEmail" value="UYE" name="user_auth">
                                 </div>
                                 <div class="col-6">
                                     <label for="inputEmail" class="form-label  mt-2">Adres</label>
@@ -79,11 +83,11 @@ helper(["yardimcifonksiyonlar"]);
                                 </div>
                                 <div class="col-3">
                                     <label for="inputEmail" class="form-label mt-2">Aktiflik Durumu</label>
-                                    <input type="text" class="form-control" id="inputEmail" value="1">
+                                    <input type="text" class="form-control" id="inputEmail" value="1" name="user_active">
                                 </div>
                                 <div class="col-12">
                                     <label for="inputEmail" class="form-label  mt-2">Açıklama</label>
-                                    <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                                    <textarea id="" cols="30" rows="10" class="form-control" name="aciklama"></textarea>
                                 </div>
 
                             </div>

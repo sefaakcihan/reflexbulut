@@ -1,5 +1,6 @@
 <?php
 use App\Models\UserModel;
+
 helper(["yardimcifonksiyonlar"]);
 ?>
 <!DOCTYPE html>
@@ -54,9 +55,24 @@ helper(["yardimcifonksiyonlar"]);
                     </div>
                 </div>
 
+
                 <?php
                 $userModel = new UserModel();
-                $userList = $userModel->orderBy('created_at', 'DESC')->where("USER_ID",$USER_ID)->find();
+                $userList = $userModel->where("USER_ID", $USER_ID)->first(); // İlk eşleşen kullanıcıyı al
+                
+                if ($userList) {
+                    $name = $userList->NAME . ' ' . $userList->SURNAME;
+                    $username = $userList->USERNAME;
+                    $email = $userList->EMAIL;
+                    $user_auth = $userList->USER_AUTH;
+                    $address = $userList->ADDRESS;
+                    $aciklama = $userList->ACIKLAMA; // Burada düzeltilmiş
+                    $description = $userList->PHONE; // Burada düzeltilmiş
+                    $user_active = $userList->USER_ACTIVE;
+                } else {
+                    // Kullanıcı bulunamadı, hata işleme eklenebilir
+                    // Örnek: echo "Kullanıcı bulunamadı.";
+                }
                 ?>
 
                 <div class="card">
@@ -64,36 +80,41 @@ helper(["yardimcifonksiyonlar"]);
                         <div class="row">
                             <div class="col-3">
                                 <label for="inputEmail" class="form-label  mt-2">Ad & Soyad</label>
-                                <input type="text" class="form-control" id="inputEmail" value="" disabled>
+                                <input type="text" class="form-control" id="inputEmail" value="<?= $name ?>" disabled>
                             </div>
                             <div class="col-3">
                                 <label for="inputEmail" class="form-label  mt-2">Kullanıcı adı</label>
-                                <input type="text" class="form-control" id="inputEmail" value="" disabled>
+                                <input type="text" class="form-control" id="inputEmail" value="<?= $username ?>"
+                                    disabled>
                             </div>
                             <div class="col-3">
                                 <label for="inputEmail" class="form-label  mt-2">E-mail Adresi</label>
-                                <input type="text" class="form-control" id="inputEmail" value="" disabled>
+                                <input type="text" class="form-control" id="inputEmail" value="<?= $email ?>" disabled>
                             </div>
                             <div class="col-3">
                                 <label for="inputEmail" class="form-label  mt-2">Kullanıcı Yetkisi</label>
-                                <input type="text" class="form-control" id="inputEmail" value="" disabled>
+                                <input type="text" class="form-control" id="inputEmail" value="<?= $user_auth ?>"
+                                    disabled>
                             </div>
                             <div class="col-6">
                                 <label for="inputEmail" class="form-label  mt-2">Adres</label>
-                                <input type="text" class="form-control" id="inputEmail" value="" disabled>
+                                <input type="text" class="form-control" id="inputEmail" value="<?= $address ?>"
+                                    disabled>
                             </div>
                             <div class="col-6">
                                 <label for="inputEmail" class="form-label  mt-2">Açıklama</label>
-                                <input type="text" class="form-control" id="inputEmail" value="" disabled>
+                                <input type="text" class="form-control" id="inputEmail" value="<?= $aciklama ?>"
+                                    disabled>
                             </div>
                             <div class="col-3">
                                 <label for="inputEmail" class="form-label mt-2">Aktiflik Durumu</label>
-                                <input type="text" class="form-control" id="inputEmail" value="" disabled>
+                                <input type="text" class="form-control" id="inputEmail" value="<?= $user_active ?>"
+                                    disabled>
                             </div>
                         </div>
                     </div>
                 </div>
-ba
+
 
             </div>
             <!-- end page content-->

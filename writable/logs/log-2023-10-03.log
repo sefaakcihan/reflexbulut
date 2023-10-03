@@ -1,20 +1,119 @@
-CRITICAL - 2023-10-03 08:58:54 --> The framework needs the following extension(s) installed and loaded: intl.
-in SYSTEMPATH\CodeIgniter.php on line 224.
- 1 SYSTEMPATH\CodeIgniter.php(224): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
- 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
- 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
-CRITICAL - 2023-10-03 09:01:31 --> The framework needs the following extension(s) installed and loaded: intl.
-in SYSTEMPATH\CodeIgniter.php on line 224.
- 1 SYSTEMPATH\CodeIgniter.php(224): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
- 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
- 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
-CRITICAL - 2023-10-03 09:01:32 --> The framework needs the following extension(s) installed and loaded: intl.
-in SYSTEMPATH\CodeIgniter.php on line 224.
- 1 SYSTEMPATH\CodeIgniter.php(224): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
- 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
- 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
-CRITICAL - 2023-10-03 09:01:32 --> The framework needs the following extension(s) installed and loaded: intl.
-in SYSTEMPATH\CodeIgniter.php on line 224.
- 1 SYSTEMPATH\CodeIgniter.php(224): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
- 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
- 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-10-03 13:53:37 --> Attempt to read property "NAME" on array
+in APPPATH\Views\users\detail.php on line 67.
+ 1 APPPATH\Views\users\detail.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "NAME" on array', 'APPPATH\\Views\\users\\detail.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\users\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('users/detail', [], true)
+ 5 APPPATH\Controllers\users.php(103): view('users/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\users->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\users))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-03 13:54:00 --> Undefined array key "NAME"
+in APPPATH\Views\users\detail.php on line 67.
+ 1 APPPATH\Views\users\detail.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "NAME"', 'APPPATH\\Views\\users\\detail.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\users\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('users/detail', [], true)
+ 5 APPPATH\Controllers\users.php(103): view('users/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\users->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\users))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-03 13:54:15 --> Cannot use object of type stdClass as array
+in APPPATH\Views\users\detail.php on line 67.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('users/detail', [], true)
+ 4 APPPATH\Controllers\users.php(103): view('users/detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\users->detail('1')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\users))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-03 13:54:41 --> Attempt to read property "name" on array
+in APPPATH\Views\users\detail.php on line 67.
+ 1 APPPATH\Views\users\detail.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on array', 'APPPATH\\Views\\users\\detail.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\users\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('users/detail', [], true)
+ 5 APPPATH\Controllers\users.php(103): view('users/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\users->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\users))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-03 13:55:10 --> Attempt to read property "name" on array
+in APPPATH\Views\users\detail.php on line 67.
+ 1 APPPATH\Views\users\detail.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on array', 'APPPATH\\Views\\users\\detail.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\users\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('users/detail', [], true)
+ 5 APPPATH\Controllers\users.php(103): view('users/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\users->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\users))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-03 13:55:26 --> Attempt to read property "NAME" on array
+in APPPATH\Views\users\detail.php on line 67.
+ 1 APPPATH\Views\users\detail.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "NAME" on array', 'APPPATH\\Views\\users\\detail.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\users\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('users/detail', [], true)
+ 5 APPPATH\Controllers\users.php(103): view('users/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\users->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\users))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-03 13:55:27 --> Attempt to read property "NAME" on array
+in APPPATH\Views\users\detail.php on line 67.
+ 1 APPPATH\Views\users\detail.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "NAME" on array', 'APPPATH\\Views\\users\\detail.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\users\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('users/detail', [], true)
+ 5 APPPATH\Controllers\users.php(103): view('users/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\users->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\users))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-03 13:55:41 --> Attempt to read property "NAME" on array
+in APPPATH\Views\users\detail.php on line 67.
+ 1 APPPATH\Views\users\detail.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "NAME" on array', 'APPPATH\\Views\\users\\detail.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\users\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('users/detail', [], true)
+ 5 APPPATH\Controllers\users.php(103): view('users/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\users->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\users))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-03 13:55:56 --> Undefined array key "NAME"
+in APPPATH\Views\users\detail.php on line 67.
+ 1 APPPATH\Views\users\detail.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "NAME"', 'APPPATH\\Views\\users\\detail.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\users\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('users/detail', [], true)
+ 5 APPPATH\Controllers\users.php(103): view('users/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\users->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\users))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-03 13:57:17 --> Cannot use object of type stdClass as array
+in APPPATH\Views\users\detail.php on line 63.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('users/detail', [], true)
+ 4 APPPATH\Controllers\users.php(103): view('users/detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\users->detail('1')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\users))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-03 14:06:12 --> Undefined variable $USER_ID
+in APPPATH\Views\users\edit.php on line 61.
+ 1 APPPATH\Views\users\edit.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $USER_ID', 'APPPATH\\Views\\users\\edit.php', 61)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\users\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('users/edit', [], true)
+ 5 APPPATH\Controllers\users.php(95): view('users/edit')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\users->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\users))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -26,29 +26,33 @@ class users extends Controller
       // Validation
       $validation = \Config\Services::validation();
       $rules = [
-         'prd_name' => 'required',
-         'prd_price' => 'required',
-         'prd_years_price' => 'required',
-         'prd_title' => 'required',
-         'prd_detail' => 'required',
+         'name' => 'required',
+         'surname' => 'required',
+         'username' => 'required',
+         'email' => 'required',
+         'user_auth' => 'required',
+         'address' => 'required',
+         'user_active' => 'required',
       ];
 
       $errors = [
-         'prd_name' => [
-            'required' => 'Ürün adı alanı zorunludur.',
+         'name' => [
+            'required' => 'Ad alanı zorunludur.',
          ],
-         'prd_price' => [
-            'required' => 'Fiyat alanı zorunludur.',
+         'surname' => [
+            'required' => 'Soyad alanı zorunludur.',
          ],
-         'prd_years_price' => [
-            'required' => 'Fiyat alanı zorunludur.',
+         'username' => [
+            'required' => 'Kullanıcı adı alanı zorunludur.',
          ],
-         'prd_title' => [
-            'required' => 'Başlık zorunludur.',
+         'email' => [
+            'required' => 'Email alanı zorunludur.',
          ],
-         'prd_detail' => [
-            'required' => 'Ürün Detayları zorunludur.',
-
+         'user_auth' => [
+            'required' => 'Yetki alanı zorunludur.',
+         ],
+         'address' => [
+            'required' => 'Adres alanı zorunludur.',
          ]
       ];
 
@@ -57,29 +61,38 @@ class users extends Controller
       }
       // Validation Bitiş
 
+      // Kullanıcıyı kontrol etmek için kullanıcı adı veya e-posta adresi ile sorgu yapın
+      $existingUser = $userModel->where('USERNAME', $request->getPost('username'))->orWhere('EMAIL', $request->getPost('email'))->first();
+
+      if ($existingUser) {
+         return redirect()->back()->withInput()->with('errors', ['Bu kullanıcı adı veya e-posta adresi zaten kullanılıyor.']);
+      }
+
       $data = [
-         "PRD_NAME" => $request->getPost('prd_name'),
-         "PRD_PRICE" => $request->getPost('prd_price'),
-         "PRD_YEARS_PRICE" => $request->getPost('prd_years_price'),
-         "PRD_TITLE" => $request->getPost('prd_title'),
-         "PRD_DETAIL" => $request->getPost('prd_detail'),
+         "NAME" => $request->getPost('name'),
+         "SURNAME" => $request->getPost('surname'),
+         "USERNAME" => $request->getPost('username'),
+         "EMAIL" => $request->getPost('email'),
+         "USER_AUTH" => $request->getPost('user_auth'),
+         "ACIKLAMA" => $request->getPost('aciklama'),
+         "PHONE" => $request->getPost('phone'),
+         "ADDRESS" => $request->getPost('address'),
+
       ];
 
       $userModel->insert($data);
       if ($userModel) {
          // Başarı mesajını ayarla veya isteğe bağlı olarak işlem yap
-         $successMessage = 'Ürün başarıyla kayıt edildi.';
+         $successMessage = 'Kullanıcı başarıyla kayıt edildi.';
          return redirect()->back()->withInput()->with('success', $successMessage);
       } else {
          return "Bir sorun oluştu hata kodu: #PRD1535";
       }
-
-
    }
    public function edit($USER_ID)
    {
       $userModel = new UserModel();
-      return view("users/edit");
+      return view("users/edit", ["USER_ID" => $USER_ID]);
    }
    public function delete($USER_ID)
    {
