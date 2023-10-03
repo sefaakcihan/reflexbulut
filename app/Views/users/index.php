@@ -42,7 +42,7 @@ helper(["yardimcifonksiyonlar"]);
                     </div>
                     <div class="ms-auto">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-outline-primary">Kullanıcı Ekle</button>   
+                            <a href="<?=base_url()?>/users/add-users"  type="button" class="btn btn-outline-primary">Kullanıcı Ekle</a>   
                         </div>
                     </div>
                 </div>
