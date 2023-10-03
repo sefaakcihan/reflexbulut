@@ -1,0 +1,33 @@
+CRITICAL - 2023-09-29 09:07:14 --> Undefined property: stdClass::$USER_ID
+in APPPATH\Views\product\index.php on line 164.
+ 1 APPPATH\Views\product\index.php(164): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$USER_ID', 'APPPATH\\Views\\product\\index.php', 164)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\product\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('product/index', [], true)
+ 5 APPPATH\Controllers\product.php(17): view('product/index')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\product->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\product))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-29 09:11:52 --> Undefined property: stdClass::$PRD_PRİCE
+in APPPATH\Views\product\index.php on line 167.
+ 1 APPPATH\Views\product\index.php(167): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$PRD_PRİCE', 'APPPATH\\Views\\product\\index.php', 167)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\product\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('product/index', [], true)
+ 5 APPPATH\Controllers\product.php(17): view('product/index')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\product->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\product))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-29 10:25:48 --> Undefined property: stdClass::$PRD_PRICE_YEARS
+in APPPATH\Views\product\index.php on line 170.
+ 1 APPPATH\Views\product\index.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$PRD_PRICE_YEARS', 'APPPATH\\Views\\product\\index.php', 170)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\product\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('product/index', [], true)
+ 5 APPPATH\Controllers\product.php(17): view('product/index')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\product->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\product))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
