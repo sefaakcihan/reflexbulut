@@ -28,6 +28,20 @@ helper(["yardimcifonksiyonlar"]);
             <!-- start page content-->
             <div class="page-content">
 
+            <style>
+            
+            
+            .product-text{
+                font-size: 20px;
+                padding-bottom: 8px;
+            }
+
+            
+            
+            
+            </style>
+
+
                 <!--start breadcrumb-->
                 <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
                     <div class="breadcrumb-title pe-3">Ürünler</div>
@@ -271,22 +285,28 @@ helper(["yardimcifonksiyonlar"]);
                                                                         class="form-control">
                                                                 </div>
                                                                 <div class="col-md-12 mt-1 mb-2">
-                                                                    <label for="">Ürün Açıklaması</label>
+                                                                    <label for="">Ürün Görseli</label>
+                                                                   
                                                                     <textarea name="prd_detail" class="form-control" id=""
                                                                         cols="30"
                                                                         rows="3"><?= htmlspecialchars($product->PRD_DETAIL) ?></textarea>
                                                                 </div>
                                                                 <hr>
-                                                                <div class="col-md-12 mt-1 align-items-center justify-content-center"
+                                                                <div  class="col-md-12 row align-items-center justify-content-center">
+                                                                
+                                                                <div id="product-design" class="border border-1 border-secondary col-md-4  mt-1 align-items-center border-1  justify-content-center p-4 rounded-2 bg-muted"
                                                                     style="display: flex; flex-direction: column; ">
-                                                                    <label class="pt-2" for="">Mevcut Ürün Görseli</label>
+                                                                    <label class= "product-text" for="">Ürün Görseli</label>
                                                                     <?php if ($product->PRD_IMAGE != "YOK") { ?>
-                                                                        <img class="" width="250px"
+                                                                        <img  class ="rounded-3 img-fluid"
                                                                             src="<?= base_url() ?>/<?= $product->PRD_IMAGE ?>"
                                                                             alt="">
+                                                                            
+                                                                    
                                                                     <?php } else {
                                                                         echo "<p class='text-danger'>Ürün Görseli Bulunamadı.</p>";
                                                                     } ?>
+                                                                </div>
                                                                 </div>
 
                                                             </div>
