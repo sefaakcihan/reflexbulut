@@ -242,7 +242,7 @@ helper(["yardimcifonksiyonlar"]);
                                         <form method="post" enctype="multipart/form-data">
                                             <div class="modal fade" id="exampleFullScreenModal<?= $product->PRD_ID ?>"
                                                 tabindex="-1" aria-hidden="true">
-                                                <div class="modal-dialog modal-fullscreen">
+                                                <div class="modal-dialog modal-lg">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
                                                             <h5 class="modal-title">Ürün Detay -

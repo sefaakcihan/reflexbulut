@@ -1,4 +1,34 @@
 <?= helper(["yardimcifonksiyonlar"]) ?><!--start sidebar -->
+<!-- Tekli Hata Mesajı -->
+<?php if (session()->has('error')): ?>
+    <script>
+        swal("Dikkat!", "<?= session('error') ?>", "error");
+    </script>
+<?php endif; ?>
+<!-- Tekli Hata Mesajı -->
+<!-- ///////////////////// -->
+<!-- Başarılı Mesajı -->
+<?php if (session()->has('success')): ?>
+    <script>
+        swal("Başarılı!", "<?= session('success') ?>", "success");
+    </script>
+<?php endif; ?>
+
+<!-- Başarılı Mesajı -->
+<!-- ///////////////////// -->
+<!-- Sıralı Hata Mesajları -->
+<?php
+$mesaj = "";
+if (session()->getFlashdata('errors')): ?>
+
+    <?php foreach (session()->getFlashdata('errors') as $error): ?>
+        <?php $mesaj = $mesaj . " " . esc($error) ?>
+    <?php endforeach; ?>
+    <script>
+        swal("Dikkat!", "<?= $mesaj ?>", "error");
+    </script>
+<?php endif; ?>
+<!-- Sıralı Hata Mesajları -->
 <aside class="sidebar-wrapper" data-simplebar="true">
   <div class="sidebar-header">
     <div>
