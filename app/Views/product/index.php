@@ -291,7 +291,7 @@ helper(["yardimcifonksiyonlar"]);
                                                                         cols="30"
                                                                         rows="3"><?= htmlspecialchars($product->PRD_DETAIL) ?></textarea>
                                                                 </div>
-                                                                <hr>
+                                                                
                                                                 <div  class="col-md-12 row align-items-center justify-content-center">
                                                                 
                                                                 <div id="product-design" class="border border-1 border-secondary col-md-4  mt-1 align-items-center border-1  justify-content-center p-4 rounded-2 bg-muted"
