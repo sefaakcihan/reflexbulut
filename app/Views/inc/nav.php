@@ -35,7 +35,9 @@ if (session()->getFlashdata('errors')): ?>
       <img src="<?= site_logo("small") ?>" class="logo-icon" alt="logo icon">
     </div>
     <div>
-      <h4 class="logo-text">Reflex Bulut</h4>
+      <h4 class="logo-text">Reflex Bulut</h4><style> .logo-text{
+        cursor:pointer;
+      } </style>
     </div>
   </div>
   <!--navigation-->
